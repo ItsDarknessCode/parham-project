@@ -90,9 +90,9 @@ function App() {
         starsInteraction={false}
       />
 
-      {/* محتوای اصلی */}
+      {/* محتوای اصلی - فاصله کلی کمتر */}
       <motion.div
-        className="relative z-10 min-h-dvh w-full max-w-[390px] mx-auto flex flex-col items-center gap-10 px-5 pt-6 pb-20"
+        className="relative z-10 min-h-dvh w-full max-w-[390px] mx-auto flex flex-col items-center gap-6 px-5 pt-4 pb-16" // فاصله pt-4 و gap-6 برای جلوگیری از اسکرول در موبایل
         variants={staggerContainer}
         initial="hidden"
         animate="visible"
@@ -101,12 +101,12 @@ function App() {
         {!hideHeaderAndMarquee && (
           <>
             <motion.header variants={fadeUp}>
-              <h1 className="text-white font-bold text-center py-10 text-4xl sm:text-5xl italic tracking-tight">
+              <h1 className="text-white font-bold text-center py-6 text-4xl sm:text-5xl italic tracking-tight">
                 <Shine>Parham Moradi</Shine>
               </h1>
             </motion.header>
 
-            <div className="w-full overflow-hidden py-6">
+            <div className="w-full overflow-hidden py-4">
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
                 <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
@@ -203,7 +203,7 @@ function App() {
               transition={{ type: "spring" as const, stiffness: 400, damping: 17 } as const}
               onClick={handleAboutClick}
               className="
-                relative overflow-hidden px-10 py-5 mt-4
+                relative overflow-hidden px-10 py-5 mt-2
                 text-xl sm:text-xl font-bold text-white tracking-wide
                 bg-gradient-to-br from-indigo-600/80 via-purple-600/70 to-blue-700/80
                 backdrop-blur-lg border-2 border-indigo-400/60 rounded-2xl
